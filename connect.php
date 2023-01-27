@@ -16,6 +16,6 @@
         $execval = $stmt->execute();
         $stmt->close();
         $conn->close();
-        echo file_get_contents("Challenge3.html");
+        echo file_get_contents("registerSuccess.html");
     }
     ?>
