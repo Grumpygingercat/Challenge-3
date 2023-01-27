@@ -14,9 +14,8 @@
         values(?,?,?,?,?)");
         $stmt->bind_param("sssss", $username, $first_name, $last_name, $email, $password);
         $execval = $stmt->execute();
-        echo $execval;
-        echo "registration sucessfully...";
         $stmt->close();
         $conn->close();
+        echo file_get_contents("Challenge3.html");
     }
     ?>
