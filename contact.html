@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>contact page</title>
+        <link rel="stylesheet" type="text/css" href="login.css" />
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="Challenge3.html"><img src="IMG/BHH ITECH.png" alt="BHHITECH" width="30" height="30" ALIGN="CENTER"></a></li>
+                    <li><a href="Challenge3.html">Startseite</a></li>
+                    <li><a href="about.html">Über uns</a></li>
+                    <li><a href="#">Kontakt</a></li>
+                    <li><a href="login.htlm">Einloggen</a></li>
+                </ul>
+            </nav>
+        </header>
+    <form action="contact.php" method="post">
+       
+        <label for="Firstname">Vorname:</label>
+        <input type="text" id="Firstname" name="first_name">
+
+        <label for="LastName">Nachname:</label>
+        <input type="text" id="LastName" name="last_name">
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+
+        <label for="message">Nachricht</label>
+        <textarea id="message" name="message" placeholder="beschreibe dein Anliegen.." style="height:100px"></textarea>
+    
+
+        <input type="submit" value="Einreichen">
+     </form> 
+     <footer>
+        <p>Copyright ©2022 T-Shirt Shop</p>
+      </footer>  
+    </body>
+</html>
