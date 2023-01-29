@@ -17,7 +17,7 @@
                 </ul>
             </nav>
         </header>
-    <form action="contact.php">
+    <form action="contact.php" method="post">
        
         <label for="Firstname">Vorname:</label>
         <input type="text" id="Firstname" name="first_name">
@@ -29,7 +29,7 @@
         <input type="email" id="email" name="email">
 
         <label for="message">Nachricht</label>
-        <textarea id="message" name="message" placeholder="beschreibe dein Anliegen.." style="height:100px"></textarea>
+        <textarea maxlength="2000" id="message" name="message" placeholder="beschreibe dein Anliegen.." style="height:100px"></textarea>
     
 
         <input type="submit" value="Einreichen">
