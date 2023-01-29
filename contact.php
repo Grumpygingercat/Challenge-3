@@ -12,5 +12,5 @@
         $execval = $stmt->execute();
         $stmt->close();
         $conn->close();
-        echo file_get_contents("registerSuccessful.html");
+        echo file_get_contents("contactSuccessful.html");
     ?>
