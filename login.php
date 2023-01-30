@@ -9,7 +9,7 @@
         $username = mysqli_real_escape_string($con, $username);  
         $password = mysqli_real_escape_string($con, $password);  
       
-        $result = mysql_querry("select * from customer where username = '$username' and password = '$password'") or 
+        $result = mysql_query("select * from customer where username = '$username' and password = '$password'") or 
         die("Failed to querry database ".mysql_error());
         $row = mysql_fetch_array($result);
         if ($row['username']==$username && $row['password']==$password){
