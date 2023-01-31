@@ -5,7 +5,7 @@
     $last_name = $_POST['last_name'];
     $email = $_POST['email'];
     $phone = $_POST['phone'];
-    $address = $_POST['address']
+    $address = $_POST['address'];
     $password = $_POST['password'];
 
         $stmt = $conn->prepare("insert into customer(username, first_name, last_name, email, phone, address, password)
