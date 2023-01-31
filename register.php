@@ -8,9 +8,8 @@
     $address = $_POST['address']
     $password = $_POST['password'];
 
-
         $stmt = $conn->prepare("insert into customer(username, first_name, last_name, email, phone, address, password)
-        values(?,?,?,?,?)");
+        values(?,?,?,?,?,?,?)");
         $stmt->bind_param("sssssss", $username, $first_name, $last_name, $email, $phone, $address, $password);
         $execval = $stmt->execute();
         $stmt->close();
