@@ -157,7 +157,7 @@ span.price {
             <li><a href="Challenge3.html">Startseite</a></li>
             <li><a href="about.html">Über uns</a></li>
             <li><a href="contact.html">Kontakt</a></li>
-            <li><a href="register.html">Registrieren</a></li>
+            <li><a href="login.html">Einloggen</a></li>
             <li><a href="cart.php">Kiste</a></li>
           </ul>
         </nav>
