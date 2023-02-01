@@ -28,7 +28,7 @@ CREATE TABLE `orders` (
   ordertime timestamp NOT NULL DEFAULT current_timestamp(),
   ordersize varchar(4),
   t_shirt_id varchar(5),
-  size enum unsigned
+  size enum ('s','m','l','xl') NOT NULL
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 CREATE TABLE cart (
@@ -47,8 +47,6 @@ CREATE TABLE t_shirt (
 
 ALTER TABLE `orders`
   ADD FOREIGN KEY (`user_id`) REFERENCES customer(`user_id`);
-ALTER TABLE `orders`
-  ADD FOREIGN KEY (`size`) REFERENCES t_shirt(`size`);
 
 ALTER TABLE cart  
   ADD FOREIGN KEY (user_id) REFERENCES customer(user_id);
