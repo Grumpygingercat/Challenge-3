@@ -28,7 +28,6 @@ CREATE TABLE `orders` (
   ordertime timestamp NOT NULL DEFAULT current_timestamp(),
   ordersize varchar(4),
   t_shirt_id varchar(5),
-  size enum ('s','m','l','xl') NOT NULL
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 CREATE TABLE cart (
