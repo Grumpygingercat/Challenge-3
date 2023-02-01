@@ -179,9 +179,8 @@ span.price {
                 <div class="main">
                   <div class="card">
                       <img src="data:image/jpeg;base64,'.base64_encode($row['2'] ).'" alt="Denim Jeans" style="width:210px;height:250px;>
-                      <h1>Tailored Jeans</h1>
                       <p class="price">'.$row[1].'</p>
-                      <p>Rs.'.$row[5].'</p>
+                      <p>Price: '.$row[5].'</p>
                       <p><button name="btn_remove">Remove</button></p>
                     </div>
                   </div>
