@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
   }
-  
+
   header {
     background-color: #333;
     color: #fff;
@@ -42,6 +42,7 @@ body {
     font-size: x-large;
   }
   #footer {
+    text-align: center;
     color: #fff;
     position: fixed;
     padding: 7px 7px 0px 7px;
