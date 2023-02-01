@@ -43,7 +43,7 @@ CREATE TABLE t_shirt (
  pic longblob NOT NULL,
  size enum('s','m','l','xl') NOT NULL,
  price double NOT NULL
-)
+);
 
 ALTER TABLE `orders`
   ADD FOREIGN KEY (`user_id`) REFERENCES customer(`user_id`);
