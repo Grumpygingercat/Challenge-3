@@ -26,7 +26,6 @@ CREATE TABLE `orders` (
   order_id int(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
   user_id int(11),
   ordertime timestamp NOT NULL DEFAULT current_timestamp(),
-  ordersize varchar(4) NOT NULL DEFAULT '1',
   t_shirt_id varchar(5),
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
