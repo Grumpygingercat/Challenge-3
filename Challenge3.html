@@ -6,16 +6,23 @@
   <title>T-Shirt Shop</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<style>input[type="submit"] {
-  width: 10%;
-  background-color: #333;
-  color: white;
-  padding: 8px 20px;
-  margin-bottom: 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
+<style>
+  input[type="submit"] {
+    width: 10%;
+    background-color: #333;
+    color: white;
+    padding: 8px 20px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  body {
+    display: inline-block;
+    margin: 0px auto;
+    text-align: center;
+  }
 </style>
 
 <body>
@@ -33,50 +40,51 @@
   </header>
   <main>
     <section id="featured-products">
-      <h2>Aktuelle Kollektion</h2>
       <ul>
-        <li>
-          <h3>Basic</h3>
-          <img src="IMG/BHH ITECH X SHIRT.png" alt="BHH ITECH X SHIRT" width="500">
-          <p>Unser basic T-Shirt ist einfach klasse. Ob du es mit einer auffälligen Hose kombinierst oder unter einem klassischen Blazer trägst, das Basic T-Shirt ist der perfekte Begleiter für jeden Anlass. Es ist bequem, langlebig und einfach zu stylen. Mit einem Basic T-Shirt kannst du zeigen, wer du bist, ohne viele Worte zu verlieren. Investiere in ein paar gute Basics und lass deiner Kreativität freien Lauf!</p>
-          <label for="cars">Größe Auswählen:</label>
-          <select name="size">
-            <option value="S">S</option>
-            <option value="M">L</option>
-            <option value="L">M</option>
-          </select>
-          <br>
-          <br>
-          <input type="submit" value="In die Kiste packen">
-        </li>
-        <li>
-          <h3>Creative</h3>
-          <img src="IMG/BHH ITECH 1-2 SHIRT.png" alt="T-Shirt 2" width="500">
-          <p>Ein kreatives T-Shirt ist ein unverzichtbarer Bestandteil jeder Garderobe, denn es bietet die Möglichkeit, deine Persönlichkeit und Interessen auszudrücken. Es ist der perfekte Weg, um dich von der Masse abzuheben und zu zeigen, wer du bist.</p>
-          <label for="size">Größe Auswählen:</label>
-          <select name="size">
-            <option value="S">S</option>
-            <option value="M">L</option>
-            <option value="L">M</option>
-          </select>
-          <br>
-          <br>
-          <input type="submit" value="In die Kiste packen">
-        </li>
-        <li>
-          <h3>Simple</h3>
-          <img src="Img/BHH ITECH BASIC.png" alt="T-Shirt 3" width="500">
-          <p>Ein einfaches T-Shirt ist der Inbegriff von Stil und Eleganz. Es ist ein zeitloser Klassiker, der nie aus der Mode kommt und immer passend ist. Investiere in ein einfaches T-Shirt und kreiere damit unzählige Outfits für jeden Anlass. Einfachheit kann so viel bewirken!</p>
-          <label for="cars">Größe Auswählen:</label>
-          <select name="size">
-            <option value="S">S</option>
-            <option value="M">L</option>
-            <option value="L">M</option>
-          </select>
-          <br>
-          <br>
-          <input type="submit" value="In die Kiste packen">
-        </li>
+        <h2>Aktuelle Kollektion</h2>
+        <h3>Basic T-Shirt</h3>
+        <img src="IMG/BHH ITECH X SHIRT.png" alt="BHH ITECH X SHIRT" width="500">
+        <p>Unser basic T-Shirt ist einfach klasse. Ob du es mit einer auffälligen Hose kombinierst oder unter einem
+          klassischen Blazer trägst, das Basic T-Shirt ist der perfekte Begleiter für jeden Anlass. Es ist bequem,
+          langlebig und einfach zu stylen. Mit einem Basic T-Shirt kannst du zeigen, wer du bist, ohne viele Worte zu
+          verlieren. Investiere in ein paar gute Basics und lass deiner Kreativität freien Lauf!</p>
+        <label for="size">Größe Auswählen:</label>
+        <select name="size">
+          <option value="S">S</option>
+          <option value="M">L</option>
+          <option value="L">M</option>
+        </select>
+        <br>
+        <br>
+        <input type="submit" value="In die Kiste packen">
+        <h3>Creative T-Shirt</h3>
+        <img src="IMG/BHH ITECH 1-2 SHIRT.png" alt="T-Shirt 2" width="500">
+        <p>Ein kreatives T-Shirt ist ein unverzichtbarer Bestandteil jeder Garderobe, denn es bietet die Möglichkeit,
+          deine Persönlichkeit und Interessen auszudrücken. Es ist der perfekte Weg, um dich von der Masse abzuheben und
+          zu zeigen, wer du bist.</p>
+        <label for="size">Größe Auswählen:</label>
+        <select name="size">
+          <option value="S">S</option>
+          <option value="M">L</option>
+          <option value="L">M</option>
+        </select>
+        <br>
+        <br>
+        <input type="submit" value="In die Kiste packen">
+        <h3>Simple T-Shirt</h3>
+        <img src="Img/BHH ITECH BASIC.png" alt="T-Shirt 3" width="500">
+        <p>Ein einfaches T-Shirt ist der Inbegriff von Stil und Eleganz. Es ist ein zeitloser Klassiker, der nie aus der
+          Mode kommt und immer passend ist. Investiere in ein einfaches T-Shirt und kreiere damit unzählige Outfits für
+          jeden Anlass. Einfachheit kann so viel bewirken!</p>
+        <label for="size">Größe Auswählen:</label>
+        <select name="size">
+          <option value="S">S</option>
+          <option value="M">L</option>
+          <option value="L">M</option>
+        </select>
+        <br>
+        <br>
+        <input type="submit" value="In die Kiste packen">
       </ul>
     </section>
   </main>
