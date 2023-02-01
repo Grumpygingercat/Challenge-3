@@ -37,7 +37,7 @@ CREATE TABLE cart (
   PRIMARY KEY (user_id, t_shirt_id)
 );
 
-CREAT TABLE t_shirt (
+CREATE TABLE t_shirt (
  t_shirt_id int(5) PRIMARY KEY NOT NULL AUTO_INCREMENT,
  title varchar(100) NOT NULL,
  pic longblob NOT NULL,
