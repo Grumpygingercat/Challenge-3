@@ -178,7 +178,7 @@ span.price {
               <form method="POST" action="cart.php?action=add&id='.$row[0].'">
                 <div class="main">
                   <div class="card">
-                      <img src="data:image/jpeg;base64,'.base64_encode($row['2'] ).'" alt="Denim Jeans" style="width:210px;height:250px;>
+                      <img src="data:image/jpeg;base64,'.base64_encode($row['2'] ).'" alt="Bild" style="width:210px;height:250px;>
                       <p class="price">'.$row[1].'</p>
                       <p>Price: '.$row[4].'€</p>
                       <p> Size: '.$row[3].'</p>
