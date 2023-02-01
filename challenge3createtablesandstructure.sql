@@ -47,6 +47,7 @@ CREATE TABLE t_shirt (
 
 ALTER TABLE `orders`
   ADD FOREIGN KEY (`user_id`) REFERENCES customer(`user_id`);
+ALTER TABLE orders
   ADD FOREIGN KEY (size) REFERENCES t_shirt(size);
 
 ALTER TABLE cart  
