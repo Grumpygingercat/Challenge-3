@@ -1,17 +1,17 @@
 <?php
-$cus_id = "991";
+$cus_id = "1";
 ?>
 
 <!-- Remove button -->
 <?php
-$cus_id = "991";
+$cus_id = "1";
 if (isset($_POST["btn_remove"])){
     $id = $_GET["id"];
-    $connect = mysqli_connect("localhost", "root", "", "dvdshop");
-    $query = "DELETE FROM `cart` WHERE `cart`.`dvd_id` = '$id'";
+    $connect = mysqli_connect("localhost", "root", "", "challenge3");
+    $query = "DELETE FROM `cart` WHERE `cart`.`t_shirt_id` = '$id'";
     if(mysqli_query($connect, $query))
       {
-           echo '<script>window.location="cart_pro.php"</script>';
+           echo '<script>window.location="cart.php"</script>';
       }
     }
 ?>
@@ -20,19 +20,19 @@ if (isset($_POST["btn_remove"])){
 <?php
   if (isset($_POST["btn_order"])){
     $query="select * from cart where user_id='$cus_id'";
-    $connect = mysqli_connect("localhost", "root", "", "dvdshop");
+    $connect = mysqli_connect("localhost", "root", "", "challenge3");
     $result = mysqli_query($connect, $query);
     while($row = mysqli_fetch_array($result))
     {
       //simple order records insert into order table
-       mysqli_query($connect, "INSERT INTO `order` (`user_id`, `dvd_id`) VALUES ('$cus_id', '$row[1]')");
+       mysqli_query($connect, "INSERT INTO `orders` (`user_id`, `t_shirt_id`) VALUES ('$cus_id', '$row[1]')");
      }
      //delete current data drom from cart table after place order
      mysqli_query($connect, "delete from cart where user_id='$cus_id'");
      //order successfully message
      echo '<script>alert("Order placed successfully")</script>';
      //redirect site
-     echo '<script>window.location="cart_pro.php"</script>';
+     echo '<script>window.location="cart.php"</script>';
   }
  ?>
 
@@ -167,20 +167,20 @@ span.price {
   <div class="centered">
   <?php
         $con = mysqli_connect("localhost", "root", "");
-        mysqli_select_db($con , "dvdshop");
+        mysqli_select_db($con , "challenge3");
         $count = 0;
         //search current user's cart details
-        $query = "SELECT * FROM dvd INNER JOIN cart ON cart.dvd_id = dvd.dvd_id WHERE cart.user_id = '" . $cus_id ."'";
+        $query = "SELECT * FROM t_shirt INNER JOIN cart ON cart.t_shirt_id = t_shirt.t_shirt_id WHERE cart.user_id = '" . $cus_id ."'";
         $result = mysqli_query($con, $query);
         while($row = mysqli_fetch_array($result))
           {
             echo'
-              <form method="POST" action="cart_pro.php?action=add&id='.$row[0].'">
+              <form method="POST" action="cart.php?action=add&id='.$row[0].'">
                 <div class="main">
                   <div class="card">
                       <img src="data:image/jpeg;base64,'.base64_encode($row['2'] ).'" alt="Denim Jeans" style="width:210px;height:250px;>
                       <p class="price">'.$row[1].'</p>
-                      <p>Price: '.$row[5].'</p>
+                      <p>Price: '.$row[4].'€</p>
                       <p><button name="btn_remove">Remove</button></p>
                     </div>
                   </div>
@@ -194,7 +194,7 @@ span.price {
 <!--cart summery-->
 <div class="split right">
   <div class="centered">
-      <form method="POST" action="cart_pro.php?action=add">
+      <form method="POST" action="cart.php?action=add">
         <div class="col-25">
           <div class="container">
             <h4>Cart summary
@@ -206,19 +206,19 @@ span.price {
             <?php
                   $total = 0;
                   $con = mysqli_connect("localhost", "root", "");
-                  mysqli_select_db($con , "dvdshop");
-                  $query = "SELECT * FROM dvd INNER JOIN cart ON cart.dvd_id = dvd.dvd_id WHERE cart.user_id = '" . $cus_id ."'";
+                  mysqli_select_db($con , "challenge3");
+                  $query = "SELECT * FROM t_shirt INNER JOIN cart ON cart.t_shirt_id = t_shirt.t_shirt_id WHERE cart.user_id = '" . $cus_id ."'";
                   $result = mysqli_query($con, $query);
                   while($row = mysqli_fetch_array($result))
                     {
                       echo'
-                            <p><a href="#">'.$row[1].'</a> <span class="price">$'.$row[5].'</span></p>
+                            <p><a href="#">'.$row[1].'</a> <span class="price">'.$row[4].'€</span></p>
                           ';
-                          $total = $total + $row[5];
+                          $total = $total + $row[4];
                     }
              ?>
             <hr>
-            <p>Total <span class="price" style="color:black"><b>$<?php echo''.$total.''; ?></b></span></p>
+            <p>Total <span class="price" style="color:black"><b><?php echo''.$total.''; ?>€</b></span></p>
             <hr>
             <p><button name="btn_order">Order</button></p>
           </div>
