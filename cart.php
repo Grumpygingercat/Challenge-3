@@ -30,7 +30,7 @@ if (isset($_POST["btn_remove"])){
      //delete current data drom from cart table after place order
      mysqli_query($connect, "delete from cart where user_id='$cus_id'");
      //order successfully message
-     echo '<script>alert("Order placed successfully")</script>';
+     echo '<script>alert("Die Bestellung wurde erflogreich aufgenommen")</script>';
      //redirect site
      echo '<script>window.location="cart.php"</script>';
   }
@@ -180,8 +180,8 @@ span.price {
                   <div class="card">
                       <img src="data:image/jpeg;base64,'.base64_encode($row['2'] ).'" alt="Bild" style="width:210px;height:250px;>
                       <p class="price">'.$row[1].'</p>
-                      <p>Price: '.$row[4].'€</p>
-                      <p> Size: '.$row[3].'</p>
+                      <p>Preis: '.$row[4].'€</p>
+                      <p>Größe: '.$row[3].'</p>
                       <p><button name="btn_remove">Remove</button></p>
                     </div>
                   </div>
@@ -198,7 +198,7 @@ span.price {
       <form method="POST" action="cart.php?action=add">
         <div class="col-25">
           <div class="container">
-            <h4>Cart summary
+            <h4>Kiste
               <span class="price" style="color:black">
                 <i class="fa fa-shopping-cart"></i>
                 <b></b><br/>
@@ -219,9 +219,9 @@ span.price {
                     }
              ?>
             <hr>
-            <p>Total <span class="price" style="color:black"><b><?php echo''.$total.''; ?>€</b></span></p>
+            <p>Insgesamt <span class="price" style="color:black"><b><?php echo''.$total.''; ?>€</b></span></p>
             <hr>
-            <p><button name="btn_order">Order</button></p>
+            <p><button name="btn_order">Bestellen</button></p>
           </div>
         </div>
       </form>
