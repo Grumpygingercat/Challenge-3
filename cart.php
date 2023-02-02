@@ -8,7 +8,7 @@ $cus_id = "1";
 if (isset($_POST["btn_remove"])){
     $id = $_GET["id"];
     $connect = mysqli_connect("localhost", "root", "", "challenge3");
-    $query = "DELETE FROM `cart` WHERE `cart`.`t_shirt_id` = '$id'";
+    $query = "DELETE FROM `cart` WHERE `cart`.`cart_id` = '$id'";
     if(mysqli_query($connect, $query))
       {
            echo '<script>window.location="cart.php"</script>';
@@ -175,7 +175,7 @@ span.price {
         while($row = mysqli_fetch_array($result))
           {
             echo'
-              <form method="POST" action="cart.php?action=add&id='.$row[0].'">
+              <form method="POST" action="cart.php?action=add&id='.$row[5].'">
                 <div class="main">
                   <div class="card">
                       <img src="data:image/jpeg;base64,'.base64_encode($row['2'] ).'" alt="Bild" style="width:210px;height:250px;>
