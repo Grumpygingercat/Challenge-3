@@ -48,6 +48,7 @@
           klassischen Blazer trägst, das Basic T-Shirt ist der perfekte Begleiter für jeden Anlass. Es ist bequem,
           langlebig und einfach zu stylen. Mit einem Basic T-Shirt kannst du zeigen, wer du bist, ohne viele Worte zu
           verlieren. Investiere in ein paar gute Basics und lass deiner Kreativität freien Lauf!</p>
+          <p>Preis: 19.99€</p>
         <label for="size">Größe Auswählen:</label>
         <form action="t_shirt1.php" method="post">
           <select name="size">
@@ -57,42 +58,52 @@
           </select>
           <br>
           <br>
-          <input type="submit" value="In die Kiste packen">
+          <input type="submit" value="In die Kiste packen" id="button">
         </form>
         <h3>Creative T-Shirt</h3>
         <img src="IMG/BHH ITECH 1-2 SHIRT.png" alt="T-Shirt 2" width="500">
         <p>Ein kreatives T-Shirt ist ein unverzichtbarer Bestandteil jeder Garderobe, denn es bietet die Möglichkeit,
           deine Persönlichkeit und Interessen auszudrücken. Es ist der perfekte Weg, um dich von der Masse abzuheben und
           zu zeigen, wer du bist.</p>
+          <p>Preis: 19.99€</p>
         <label for="size">Größe Auswählen:</label>
-        <form>
+        <form action="t_shirt2.php" method="post">
           <select name="size">
-            <option value="S">S</option>
-            <option value="M">M</option>
-            <option value="L">L</option>
+            <option type="radio" value="s" id="size_s2" name="size">S</option>
+            <option type="radio" value="m" id="size_m2" name="size">M</option>
+            <option type="radio" value="l" id="size_l2" name="size">L</option>
           </select>
           <br>
           <br>
+          <input type="submit" value="In die Kiste packen" id="button1">
         </form>
-        <input type="submit" value="In die Kiste packen">
         <h3>Simple T-Shirt</h3>
         <img src="Img/BHH ITECH BASIC.png" alt="T-Shirt 3" width="500">
         <p>Ein einfaches T-Shirt ist der Inbegriff von Stil und Eleganz. Es ist ein zeitloser Klassiker, der nie aus der
           Mode kommt und immer passend ist. Investiere in ein einfaches T-Shirt und kreiere damit unzählige Outfits für
           jeden Anlass. Einfachheit kann so viel bewirken!</p>
         <label for="size">Größe Auswählen:</label>
-        <form>
+        <p>Preis: 19.99€</p>
+        <form action="t_shirt3.php" method="post">
           <select name="size">
-            <option value="S">S</option>
-            <option value="M">M</option>
-            <option value="L">L</option>
+            <option type="radio" value="s" id="size_s3" name="size">S</option>
+            <option type="radio" value="m" id="size_m3" name="size">M</option>
+            <option type="radio" value="l" id="size_l3" name="size">L</option>
           </select>
           <br>
           <br>
-          <input type="submit" value="In die Kiste packen">
+          <input type="submit" value="In die Kiste packen" id="button2">
         </form>
       </ul>
     </section>
+    <script>
+      const submit = document.querySelectorAll("input[value='In die Kiste packen']");
+      submit.forEach(submit => {
+        submit.addEventListener("click", function () {
+          alert("Das T-Shirt wurde in die Kiste gepackt");
+        });
+      });
+    </script>
   </main>
   <div id="footer">
     Copyright ©2022 T-Shirt Shop
