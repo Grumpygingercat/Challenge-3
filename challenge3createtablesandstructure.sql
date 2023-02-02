@@ -30,6 +30,7 @@ CREATE TABLE `orders` (
 );
 
 CREATE TABLE cart (
+  cart_id int(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
   user_id int(11),
   t_shirt_id int(5)
 );
